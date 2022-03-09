@@ -26,12 +26,16 @@ class Ikon extends HTMLElement {
     svg.appendChild(svgInner);
 
     style.textContent = `
-    @media (forced-colors: true) {
-      .${cn} {
-        fill: ${styleFill};
-      }
-    }
-    `;
+svg {
+  height: 100%;
+  width: 100%;
+}
+
+@media (forced-colors: true) {
+  .${cn} {
+    fill: ${styleFill};
+  }
+}`;
 
     shadowRoot.appendChild(style);
     shadowRoot.appendChild(svg);
