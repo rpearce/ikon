@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ikon</title>
+    <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    :root {
+      font-size: 10px;
+    }
+    button {
+      -webkit-appearance: none;
+      appearance: none;
+      background: none;
+      border-radius: 0;
+      border: none;
+      color: inherit;
+      cursor: pointer;
+      font: inherit;
+      margin: 0;
+      padding: 0;
+    }
+    ik-on {
+      display: inline-flex;
+    }
+    .enlarge,
+    .compress {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      border: 0.1rem solid #000;
+      border-radius: 0.6rem;
+      height: 3.2rem;
+      width: 3.2rem;
+    }
+    .enlarge:focus,
+    .enlarge:hover,
+    .compress:focus,
+    .compress:hover {
+      background-color: #000;
+      color: #fff;
+    }
+    .compress {
+      margin-left: 2rem;
+    }
+    .enlarge-ikon,
+    .compress-ikon {
+      width: 2rem;
+    }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>ikon</h1>
+      <button
+        aria-label="Enlarge"
+        class="enlarge"
+        onclick="console.log('Enlarge')"
+        type="button"
+      >
+        <ik-on class="enlarge-ikon" name="enlarge"></ik-on>
+      </button>
+      <button
+        aria-label="Compress"
+        class="compress"
+        onclick="console.log('Compress')"
+        type="button"
+      >
+        <ik-on class="compress-ikon" name="compress"></ik-on>
+      </button>
+    </main>
+    <script async src="./index.js"></script>
+  </body>
+</html>
